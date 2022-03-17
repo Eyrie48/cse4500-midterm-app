@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('welcome');
+});
+
 Route::get('/db-test', function(){
     /* try{
          \DB::connection()->getPDO();
@@ -32,3 +36,7 @@ Route::get('/db-test', function(){
           echo 'None';
     }
  });
+
+ Route::fallback(function(){
+    return view('fallback');
+});
