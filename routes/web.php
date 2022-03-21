@@ -21,6 +21,18 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
+Route::get('/manufacturer', function () {
+    return view('welcome');
+});
+
+Route::get('/equipment', function () {
+    return view('welcome');
+});
+
+Route::get('/view', function () {
+    return view('welcome');
+});
+
 Route::get('/db-test', function(){
     /* try{
          \DB::connection()->getPDO();
