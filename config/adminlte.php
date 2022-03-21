@@ -242,14 +242,19 @@ return [
             'text' => 'search',
         ],
         [
-            'text' => 'To Do\'s',
-            'url'  => 'todos',
+            'text' => 'Manufacture',
+            'url'  => 'manufacture',
             'icon' => 'fas fa-fw fa-file',
         ],
         [         
-            'text' => 'Calendar',
-            'url'  => 'calendar',
+            'text' => 'Equipment',
+            'url'  => 'equipment',
             'icon' => 'fas fa-fw fa-calendar-alt',
+        ],
+        [
+            'text' => 'View',
+            'url'  => 'view',
+            'icon' => 'fas fa-fw fa-file',
         ],
     ],
 
