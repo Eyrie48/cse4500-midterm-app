@@ -39,6 +39,17 @@ class manufacturerController extends Controller
     public function store(Request $request)
     {
         //
+        $validated = $request->validate([
+            'title' => 'required',
+            'progress' => 'required',
+       ]);
+
+       $manufacturer = Manufacturer::create([ 
+            'title' => $request->title, 
+            'progress' => $request->progress, 
+       ]);
+
+       return $this->index();
     }
 
     /**
