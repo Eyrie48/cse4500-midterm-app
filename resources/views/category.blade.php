@@ -21,14 +21,14 @@
       </thead>
       <tbody>
 
-        @foreach($categories AS $categories)
+        @foreach($categories AS $category)
         <tr>
-          <td>{{ $categories->category_name }}</td>
-          <td>{{ $categories->device_name }}</td>
-          <td>{{ $categories->serial_num }}</td>
-          <td>{{ $categories->price }}</td>
-          <td>{{ $categories->ram }}</td>
-          <td>{{ $categories->storage }}</td>
+          <td>{{ $category->category_name }}</td>
+          <td>{{ $category->device_name }}</td>
+          <td>{{ $category->serial_num }}</td>
+          <td>{{ $category->price }}</td>
+          <td>{{ $category->ram }}</td>
+          <td>{{ $category->storage }}</td>
           <td><a class="btn btn-default btn-sm" href="{{ route('todos.show',['todo'=>$todo->id]) }}">View</a></td>
         </tr>
         @endforeach
