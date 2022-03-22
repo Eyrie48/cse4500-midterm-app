@@ -22,15 +22,15 @@ Route::get('/home', function () {
 });
 
 Route::get('/manufacturer', function () {
-    return view('welcome');
+    return view('manufacturer');
 });
 
-Route::get('/equipment', function () {
-    return view('welcome');
+Route::get('/category', function () {
+    return view('category');
 });
 
-Route::get('/view', function () {
-    return view('welcome');
+Route::get('/userinfo', function () {
+    return view('userinfo');
 });
 
 Route::get('/db-test', function(){
@@ -49,11 +49,16 @@ Route::get('/db-test', function(){
     }
  });
 
- Route::get('/db-migrate', function() {
+ /*    
+
+  Wait to use to make web page first 
+ 
+  Route::get('/db-migrate', function() {
     Artisan::call('migrate');
     echo Artisan::output();
 });
 
+*/
  Route::fallback(function(){
     return view('fallback');
 });
