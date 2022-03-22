@@ -22,16 +22,16 @@ Route::get('/home', function () {
     return view('welcome');
 });
 
-Route::get('/manufacturer', function () {
-    return view('manufacturer');
+Route::get('/manufacturers', function () {
+    return view('manufacturers');
 });
 
-Route::get('/category', function () {
-    return view('category');
+Route::get('/categories', function () {
+    return view('categories');
 });
 
-Route::get('/userinfo', function () {
-    return view('userinfo');
+Route::get('/userinfos', function () {
+    return view('userinfos');
 });
 //test
 Route::get('/db-test', function(){

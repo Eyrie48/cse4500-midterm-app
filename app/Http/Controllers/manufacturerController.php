@@ -16,7 +16,7 @@ class manufacturerController extends Controller
     {
         //
         $manufacturers = Manufacturer::all();
-        return view('manufacturer', compact('manufacturers'));
+        return view('manufacturers', compact('manufacturers'));
     }
 
     /**
@@ -27,7 +27,7 @@ class manufacturerController extends Controller
     public function create()
     {
         //
-        return view('/manufacturers.create');
+        return view('manufacturers.create');
     }
 
     /**
