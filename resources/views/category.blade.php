@@ -21,7 +21,7 @@
       </thead>
       <tbody>
 
-        @foreach($todos AS $todo)
+        @foreach($categories AS $categories)
         <tr>
           <td>{{ $categories->category_name }}</td>
           <td>{{ $categories->device_name }}</td>
