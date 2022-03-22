@@ -48,17 +48,12 @@ Route::get('/db-test', function(){
           echo 'None';
     }
  });
-
- /*    
-
-  Wait to use to make web page first 
  
-  Route::get('/db-migrate', function() {
+Route::get('/db-migrate', function() {
     Artisan::call('migrate');
     echo Artisan::output();
 });
 
-*/
  Route::fallback(function(){
     return view('fallback');
 });
