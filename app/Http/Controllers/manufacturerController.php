@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\manufacturer;
+use App\Models\Manufacturer;
 
 class manufacturerController extends Controller
 {
@@ -15,7 +15,7 @@ class manufacturerController extends Controller
     public function index()
     {
         //
-        $manufacturers = manufacturer::all();
+        $manufacturers = Manufacturer::all();
         return view('manufacturer', compact('manufacturers'));
     }
 
