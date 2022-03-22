@@ -32,7 +32,7 @@ Route::get('/category', function () {
 Route::get('/userinfo', function () {
     return view('userinfo');
 });
-
+//test
 Route::get('/db-test', function(){
     /* try{
          \DB::connection()->getPDO();
