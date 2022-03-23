@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\Equipment;
 
-class CategoryController extends Controller
+class EquipmentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class CategoryController extends Controller
     public function index()
     {
         //
-        $categories = Category::all();
-        return view('categories', compact('categories'));
+        $equipments = Equipment::all();
+        return view('equipments', compact('equipments'));
     }
 
     /**
@@ -27,7 +27,7 @@ class CategoryController extends Controller
     public function create()
     {
         //
-        return view('categories.create');
+        return view('equipments.create');
     }
 
     /**
@@ -49,7 +49,7 @@ class CategoryController extends Controller
             'storage' => 'required',
        ]);
 
-       $category = Category::create([ 
+       $category = Equipment::create([ 
             'invoice' => $request->invoice,
             'device_name' => $request->device_name,
             'cpu' => $request->cpu,
@@ -72,8 +72,8 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
-        $category = Category::find($id); 
-        return view('categories.show',compact('category'));
+        $category = Equipment::find($id); 
+        return view('equipments.show',compact('equipment'));
     }
 
     /**

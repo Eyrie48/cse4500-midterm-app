@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\manufacturerController;
 use App\Http\Controllers\UserinfoController;
 
@@ -29,8 +29,8 @@ Route::get('/manufacturers', function () {
     return view('manufacturers');
 });
 
-Route::get('/categories', function () {
-    return view('categories');
+Route::get('/equipments', function () {
+    return view('equipments');
 });
 
 Route::get('/userinfos', function () {
@@ -59,7 +59,7 @@ Route::get('/db-migrate', function() {
 });
 
 Route::resource('/manufacturers', ManufacturerController::class);
-Route::resource('/categories', CategoryController::class);
+Route::resource('/equipments', EquipmentController::class);
 Route::resource('/userinfos', UserinfoController::class);
 
  Route::fallback(function(){

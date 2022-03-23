@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Category')
+@section('title', 'Equipment')
 
 @section('content_header')
-    <h1>Categories</h1>
+    <h1>Equipment</h1>
 @stop
 
 @section('content')
-<form method="post" action="{{ route('categories.store') }}" >
+<form method="post" action="{{ route('equipments.store') }}" >
     @csrf
     <x-adminlte-input name="invoice" label="Invoice" />
     <x-adminlte-input name="device_name" label="Device Name" />

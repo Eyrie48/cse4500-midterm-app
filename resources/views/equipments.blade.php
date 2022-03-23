@@ -7,31 +7,32 @@
 @stop
 
 @section('content')
-    <p>Category Content Here</p>
+    <p>Equipment Content Here</p>
     <div class="card">
       <div class="card-body">
         <table id="table" class="table table-bordered">
           <thead>
             <tr>
-              <th>Category Name</th><th>Device Name</th><th>Serial Num</th><th>Price</th><th>Ram</th><th>Storage</th><th style="width: 40px"></th>
+              <th>Invoice</th><th>Device Name</th><th>CPU</th><th>Price</th><th>Ram</th><th>Storage</th><th style="width: 40px"></th>
             </tr>
           </thead>
           <tbody>
-            @foreach($categories AS $category)
+            @foreach($equipments AS $equipment)
               <tr>
-                <td>{{ $category->category_name }}</td>
-                <td>{{ $category->device_name }}</td>
-                <td>{{ $category->serial_num }}</td>
-                <td>{{ $category->price }}</td>
-                <td>{{ $category->ram }}</td>
-                <td>{{ $category->storage }}</td>
+                <td>{{ $equipment->invoice }}</td>
+                <td>{{ $equipment->device_name }}</td>
+                <td>{{ $equipment->cpu }}</td>
+                <td>{{ $equipment->price }}</td>
+                <td>{{ $equipment->purchaseDate }}</td>
+                <td>{{ $equipment->ram }}</td>
+                <td>{{ $equipment->storage }}</td>
               </tr>
             @endforeach
           </tbody>
         </table>
       </div>
     </div>
-    <a href="{{ route('categories.create') }} " class="btn btn-primary" >Create</a>
+    <a href="{{ route('equipments.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
