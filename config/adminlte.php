@@ -247,8 +247,8 @@ return [
             'icon' => 'fas fa-fw fa-file',
         ],
         [         
-            'text' => 'Categories',
-            'url'  => 'categories',
+            'text' => 'Category',
+            'url'  => 'categorys',
             'icon' => 'fas fa-fw fa-calendar-alt',
         ],
         [
