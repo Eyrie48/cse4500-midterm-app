@@ -23,15 +23,15 @@ Route::get('/home', function () {
 });
 
 Route::get('/manufacturers', function () {
-    return view('manufacturer');
+    return view('manufacturers');
 });
 
-Route::get('/categories', function () {
-    return view('category');
+Route::get('/categorys', function () {
+    return view('categorys');
 });
 
 Route::get('/userinfos', function () {
-    return view('userinfo');
+    return view('userinfos');
 });
 //test
 Route::get('/db-test', function(){
