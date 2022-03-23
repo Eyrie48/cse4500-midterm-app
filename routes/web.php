@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\manufacturerController;
 use Illuminate\Support\Facades\Route;
 
@@ -55,7 +56,8 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
-Route::resource('/manufacturer', manufacturerController::class);
+Route::resource('/manufacturers', manufacturerController::class);
+Route::resource('/categorys', CategoryController::class);
 
  Route::fallback(function(){
     return view('fallback');
