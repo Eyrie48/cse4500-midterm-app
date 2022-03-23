@@ -13,12 +13,21 @@
             <table id="table" class="table table-bordered">
                 <thead>
                     <tr>
-                        <th style="width: 10px">Id#</th><th>Sales Name</th><th>Sales Email</th><th>Tech Name</th><th>Tech Email</th><th>Company Name</th><th style="width: 40px"></th>
+                        <th style="width: 10px">Id#</th><th>Company Name</th><th>Sales Name</th><th>Sales Email</th><th>Tech Name</th><th>Tech Email</th><th style="width: 40px"></th>
                     </tr>
                 </thead>
-                    <tbody>
-
-                    </tbody>
+                <tbody>
+                    @foreach($categories AS $category)
+                    <tr>
+                        <td>{{ $category->category_name }}</td>
+                        <td>{{ $category->device_name }}</td>
+                        <td>{{ $category->serial_num }}</td>
+                        <td>{{ $category->price }}</td>
+                        <td>{{ $category->ram }}</td>
+                        <td>{{ $category->storage }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
             </table>
         </div>
     </div>
