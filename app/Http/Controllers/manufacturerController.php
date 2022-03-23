@@ -47,7 +47,7 @@ class ManufacturerController extends Controller
             'company_name' => 'required',
        ]);
 
-       $manufacturer = Manufacturer::create([ 
+       $manufacturer = manufacturer::create([ 
             'sales_name' => $request->sales_name, 
             'sales_email' => $request->sales_email,
             'tech_name' => $request->tech_name,
