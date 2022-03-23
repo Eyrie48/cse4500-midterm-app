@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\manufacturerController;
+use App\Http\Controllers\UserinfoController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,6 +60,7 @@ Route::get('/db-migrate', function() {
 
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/categories', CategoryController::class);
+Route::resource('/userinfos', UserinfoController::class);
 
  Route::fallback(function(){
     return view('fallback');
