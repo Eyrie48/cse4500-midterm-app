@@ -8,10 +8,7 @@
 
 @section('content')
     <p>Category Content Here</p>
-@stop
-
-@section('css')
-<div class="card">
+    <div class="card">
   <div class="card-body">
     <table id="table" class="table table-bordered">
       <thead>
@@ -27,6 +24,10 @@
   </div>
 </div>
 <a href="{{ route('category.create') }} " class="btn btn-primary" >Create</a>
+@stop
+
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
 @section('js')
