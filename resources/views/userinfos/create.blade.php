@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('todos.store') }}" >
+<form method="post" action="{{ route('userinfos.store') }}" >
     @csrf
     <x-adminlte-input name="user_name" label="Name" />
     <x-adminlte-input name="user_email" label="Email" />
