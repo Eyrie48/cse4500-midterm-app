@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('sales_email');
             $table->string('tech_name');
             $table->string('tech_email');
-            $table->string('company_email');
+            $table->string('company_name');
             $table->timestamps();
         });
     }
