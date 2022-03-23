@@ -17,8 +17,12 @@
             </tr>
           </thead>
           <tbody>
-
-          
+            @foreach($categories AS $category)
+              <tr>
+                <td>{{ $category->category_name }}</td>
+                <td>{{ $category->device_name }}</td>
+              </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
