@@ -22,7 +22,7 @@
             </table>
         </div>
     </div>
-    <a href="{{ route('manufacturer.create') }} " class="btn btn-primary" >Create</a>
+    <a href="{{ route('manufacturers.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
@@ -30,5 +30,9 @@
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<script>
+    $(document).ready(function() {
+        $('#table').DataTable();
+    } );
+</script>
 @stop
