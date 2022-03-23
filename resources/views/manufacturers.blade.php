@@ -19,11 +19,13 @@
                 <tbody>
                     @foreach($manufacturers AS $manufacturer)
                     <tr>
+                        <td>{{ $manufacturer->id }}</td>
+                        <td>{{ $manufacturer->company_name }}</td>
                         <td>{{ $manufacturer->sales_name }}</td>
                         <td>{{ $manufacturer->sales_email }}</td>
                         <td>{{ $manufacturer->tech_name }}</td>
                         <td>{{ $manufacturer->tech_email }}</td>
-                        <td>{{ $manufacturer->company_name }}</td>
+                        
                     </tr>
                     @endforeach
                 </tbody>
