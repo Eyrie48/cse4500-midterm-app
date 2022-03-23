@@ -42,7 +42,7 @@ class UserinfoController extends Controller
         $validated = $request->validate([
             'user_name' => 'required',
             'user_email' => 'required',
-            'phone_number' => 'required',
+            'phone_number' => 'required|digits:10',
        ]);
 
        $userinfo = Userinfo::create([
