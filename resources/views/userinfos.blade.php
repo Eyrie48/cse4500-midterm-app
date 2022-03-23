@@ -17,7 +17,7 @@
         </tr>
       </thead>
       <tbody>
-      @foreach($todos AS $todo)
+      @foreach($userinfos AS $userinfo)
         <tr>
           <td>{{ $userinfo->id }}</td>
           <td>{{ $userinfo->user_name }}</td>
