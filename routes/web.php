@@ -27,8 +27,8 @@ Route::get('/manufacturers', function () {
     return view('manufacturers');
 });
 
-Route::get('/categorys', function () {
-    return view('categorys');
+Route::get('/categories', function () {
+    return view('categories');
 });
 
 Route::get('/userinfos', function () {
@@ -57,7 +57,7 @@ Route::get('/db-migrate', function() {
 });
 
 Route::resource('/manufacturers', manufacturerController::class);
-Route::resource('/categorys', CategoryController::class);
+Route::resource('/categories', CategoryController::class);
 
  Route::fallback(function(){
     return view('fallback');
