@@ -15,7 +15,7 @@ class ManufacturerController extends Controller
     public function index()
     {
         //
-        $manufacturers = Manufacturer::all();
+        $manufacturers = manufacturer::all();
         return view('manufacturers', compact('manufacturers'));
     }
 
@@ -61,7 +61,7 @@ class ManufacturerController extends Controller
     public function show($id)
     {
         //
-        $manufacturer = Manufacturer::find($id); 
+        $manufacturer = manufacturer::find($id); 
         return view('manufacturers.show',compact('manufacturer'));
     }
 
