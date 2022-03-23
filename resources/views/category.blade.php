@@ -23,12 +23,12 @@
 
         @foreach($categories AS $category)
         <tr>
-          <td>{{ $category->category_name }}</td>
-          <td>{{ $category->device_name }}</td>
-          <td>{{ $category->serial_num }}</td>
-          <td>{{ $category->price }}</td>
-          <td>{{ $category->ram }}</td>
-          <td>{{ $category->storage }}</td>
+          <td>{{ $categories->category_name }}</td>
+          <td>{{ $categories->device_name }}</td>
+          <td>{{ $categories->serial_num }}</td>
+          <td>{{ $categories->price }}</td>
+          <td>{{ $categories->ram }}</td>
+          <td>{{ $categories->storage }}</td>
         </tr>
         @endforeach
       </tbody>
