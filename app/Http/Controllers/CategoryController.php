@@ -48,7 +48,7 @@ class CategoryController extends Controller
             'storage' => 'required',
        ]);
 
-       $category = Category::create([ 
+       $categorys = Category::create([ 
             'category_name' => $request->category_name,
             'device_name' => $request->device_name,
             'serial_num' => $request->serial_num,
