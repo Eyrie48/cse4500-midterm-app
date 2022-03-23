@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
-    protected $fillable = ['category_name','device_name', 'serial_num', 'price', 'ram', 'storage'];
+    protected $fillable = ['invoice','device_name', 'cpu', 'price', 'purchaseDate', 'ram', 'storage'];
     use HasFactory;
 }

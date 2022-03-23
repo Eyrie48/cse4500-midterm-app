@@ -40,18 +40,20 @@ class CategoryController extends Controller
     {
         //
         $validated = $request->validate([
-            'category_name' => 'required',
+            'invoice' => 'required',
             'device_name' => 'required',
-            'serial_num' => 'required',
+            'cpu' => 'required',
+            'purchaseDate' => 'required',
             'price' => 'required',
             'ram' => 'required',
             'storage' => 'required',
        ]);
 
        $category = Category::create([ 
-            'category_name' => $request->category_name,
+            'invoice' => $request->invoice,
             'device_name' => $request->device_name,
-            'serial_num' => $request->serial_num,
+            'cpu' => $request->cpu,
+            'purchaseDate' => $request->date('purchaseDate'),
             'price' => $request->price,
             'ram' => $request->ram,
             'storage' => $request->storage, 

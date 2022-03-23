@@ -13,12 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('equipments', function (Blueprint $table) {
             $table->id();
-            $table->string('category_name');
+            $table->string('invoice');
             $table->string('device_name');
-            $table->string('serial_num');
+            $table->integer('cpu');
             $table->string('price', $precision = 8, $scale = 2);
+            $table->DateTime('purchaseDate');
             $table->integer('ram');
             $table->integer('storage');
             $table->timestamps();
@@ -32,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('equipments');
     }
 };
