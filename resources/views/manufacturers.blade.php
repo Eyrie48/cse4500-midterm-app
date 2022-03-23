@@ -19,12 +19,11 @@
                 <tbody>
                     @foreach($manufacturers AS $manufacturer)
                     <tr>
-                        <td>{{ $manufacturer->category_name }}</td>
-                        <td>{{ $manufacturer->device_name }}</td>
-                        <td>{{ $manufacturer->serial_num }}</td>
-                        <td>{{ $manufacturer->price }}</td>
-                        <td>{{ $manufacturer->ram }}</td>
-                        <td>{{ $manufacturer->storage }}</td>
+                        <td>{{ $manufacturer->sales_name }}</td>
+                        <td>{{ $manufacturer->sales_email }}</td>
+                        <td>{{ $manufacturer->tech_name }}</td>
+                        <td>{{ $manufacturer->tech_email }}</td>
+                        <td>{{ $manufacturer->company_name }}</td>
                     </tr>
                     @endforeach
                 </tbody>
