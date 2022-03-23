@@ -23,7 +23,7 @@
         </table>
       </div>
     </div>
-    
+    <a href="{{ route('category.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
