@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'To Do List')
+@section('title', 'Category')
 
 @section('content_header')
-    <h1>To Do's</h1>
+    <h1>Categories</h1>
 @stop
 
 @section('content')
-<form method="post" action="{{ route('categories.store') }}" >
+<form method="post" action="{{ route('categorys.store') }}" >
     @csrf
     <x-adminlte-input name="category_name" label="Category Name" />
     <x-adminlte-input name="device_name" label="Device Name" />
