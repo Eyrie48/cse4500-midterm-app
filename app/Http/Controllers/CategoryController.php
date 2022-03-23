@@ -48,7 +48,7 @@ class CategoryController extends Controller
             'storage' => 'required',
        ]);
 
-       $categorys = Category::create([ 
+       $category = Category::create([ 
             'category_name' => $request->category_name,
             'device_name' => $request->device_name,
             'serial_num' => $request->serial_num,
@@ -70,8 +70,8 @@ class CategoryController extends Controller
     public function show($id)
     {
         //
-        $categorys = Category::find($id); 
-        return view('categorys.show',compact('categorys'));
+        $category = Category::find($id); 
+        return view('categorys.show',compact('category'));
     }
 
     /**
