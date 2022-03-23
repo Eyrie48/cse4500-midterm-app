@@ -21,16 +21,7 @@
       </thead>
       <tbody>
 
-        @foreach($categorys AS $category)
-        <tr>
-          <td>{{ $category->category_name }}</td>
-          <td>{{ $category->device_name }}</td>
-          <td>{{ $category->serial_num }}</td>
-          <td>{{ $category->price }}</td>
-          <td>{{ $category->ram }}</td>
-          <td>{{ $category->storage }}</td>
-        </tr>
-        @endforeach
+        
       </tbody>
     </table>
   </div>
