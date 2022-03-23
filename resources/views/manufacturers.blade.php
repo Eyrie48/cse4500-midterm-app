@@ -17,14 +17,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($categories AS $category)
+                    @foreach($manufacturers AS $manufacturer)
                     <tr>
-                        <td>{{ $category->category_name }}</td>
-                        <td>{{ $category->device_name }}</td>
-                        <td>{{ $category->serial_num }}</td>
-                        <td>{{ $category->price }}</td>
-                        <td>{{ $category->ram }}</td>
-                        <td>{{ $category->storage }}</td>
+                        <td>{{ $manufacturer->category_name }}</td>
+                        <td>{{ $manufacturer->device_name }}</td>
+                        <td>{{ $manufacturer->serial_num }}</td>
+                        <td>{{ $manufacturer->price }}</td>
+                        <td>{{ $manufacturer->ram }}</td>
+                        <td>{{ $manufacturer->storage }}</td>
                     </tr>
                     @endforeach
                 </tbody>
