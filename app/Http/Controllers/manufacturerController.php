@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Manufacturer;
 
-class manufacturerController extends Controller
+class ManufacturerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -61,7 +61,7 @@ class manufacturerController extends Controller
     public function show($id)
     {
         //
-        $manufacturer = manufacturer::find($id); 
+        $manufacturer = Manufacturer::find($id); 
         return view('manufacturers.show',compact('manufacturer'));
     }
 
