@@ -9,8 +9,11 @@
 @section('content')
 <form method="post" action="{{ route('manufacturers.store') }}" >
     @csrf
-    <x-adminlte-input name="title" label="Title" />
-    <x-adminlte-input name="progress" type="number" min=0 max=100 label="Progress" />
+    <x-adminlte-input name="sales_name" label="Sales Name" />
+    <x-adminlte-input name="sales_email" label="Sales Email" />
+    <x-adminlte-input name="tech_name" label="Tech Name" />
+    <x-adminlte-input name="tech_email" label="Tech Email" />
+    <x-adminlte-input name="company_name" label="Company Name" />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop

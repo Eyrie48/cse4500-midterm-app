@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Manufacturer;
+use App\Models\manufacturer;
 
 class ManufacturerController extends Controller
 {
@@ -15,7 +15,7 @@ class ManufacturerController extends Controller
     public function index()
     {
         //
-        $manufacturers = Manufacturer::all();
+        $manufacturers = manufacturer::all();
         return view('manufacturers', compact('manufacturers'));
     }
 
@@ -40,13 +40,19 @@ class ManufacturerController extends Controller
     {
         //
         $validated = $request->validate([
-            'title' => 'required',
-            'progress' => 'required',
+            'sales_name' => 'required',
+            'sales_email' => 'required',
+            'tech_name' => 'required',
+            'tech_email' => 'required',
+            'company_name' => 'required',
        ]);
 
        $manufacturer = Manufacturer::create([ 
-            'title' => $request->title, 
-            'progress' => $request->progress, 
+            'sales_name' => $request->sales_name, 
+            'sales_email' => $request->sales_email,
+            'tech_name' => $request->tech_name,
+            'tech_email' => $request->tech_email,
+            'company_name' => $request->company_name,
        ]);
 
        return $this->index();
