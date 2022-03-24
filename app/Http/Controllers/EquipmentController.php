@@ -49,7 +49,7 @@ class EquipmentController extends Controller
             'storage' => 'required',
        ]);
 
-       $category = Equipment::create([ 
+       $equipment = Equipment::create([ 
             'invoice' => $request->invoice,
             'device_name' => $request->device_name,
             'cpu' => $request->cpu,
