@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
+            $table->string('invoice');
+            $table->string('device_name');
+            $table->integer('cpu');
+            $table->string('price', $precision = 8, $scale = 2);
+            $table->DateTime('purchaseDate');
+            $table->integer('ram');
+            $table->integer('storage');
             $table->timestamps();
         });
     }
