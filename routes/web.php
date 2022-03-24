@@ -3,6 +3,7 @@
 use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\manufacturerController;
 use App\Http\Controllers\UserinfoController;
+use App\Http\Controllers\HardwareController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -65,6 +66,7 @@ Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/equipments', EquipmentController::class);
 Route::resource('/userinfos', UserinfoController::class);
 Route::resource('/hardwares', HardwareController::class);
+
  Route::fallback(function(){
     return view('fallback');
 });
