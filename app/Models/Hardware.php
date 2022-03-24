@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Hardware extends Model
 {
-    protected $fillable = ['sales_name', 'sales_email', 'tech_name', 'tech_email', 'company_name'];
+    protected $fillable = ['invoice', 'device_name', 'cpu', 'price', 'purchaseDate', 'ram', 'storage'];
     use HasFactory;
 }

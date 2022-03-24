@@ -16,7 +16,7 @@ class HardwareController extends Controller
     {
         //
         $hardwares = Hardware::all();
-        return view('hardwares', compact('hardwares'));
+        return view('hardwares',compact('hardwares'));
     }
 
     /**
