@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Equipment')
+@section('title', 'Hardware')
 
 @section('content_header')
-    <h1>Equipment</h1>
+    <h1>Hardware</h1>
 @stop
 
 @section('content')
-    <p>Equipment Content Here</p>
+    <p>Hardware Content Here</p>
     <div class="card">
       <div class="card-body">
         <table id="table" class="table table-bordered">
