@@ -72,7 +72,7 @@ class EquipmentController extends Controller
     public function show($id)
     {
         //
-        $category = Equipment::find($id); 
+        $equipment = Equipment::find($id); 
         return view('equipments.show',compact('equipment'));
     }
 
