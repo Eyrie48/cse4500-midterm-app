@@ -16,7 +16,7 @@ class EquipmentController extends Controller
     {
         //
         $equipments = Equipment::all();
-        return view('equipments');
+        return view('equipments', compact('equipments'));
     }
 //, compact('equipments')
     /**
