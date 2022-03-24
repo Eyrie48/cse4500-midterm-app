@@ -17,12 +17,22 @@
             </tr>
           </thead>
           <tbody>
-
+          @foreach($hardwares AS $hardware)
+              <tr>
+                <td>{{ $hardware->invoice }}</td>
+                <td>{{ $hardware->device_name }}</td>
+                <td>{{ $hardware->cpu }}</td>
+                <td>{{ $hardware->price }}</td>
+                <td>{{ $hardware->purchaseDate }}</td>
+                <td>{{ $hardware->ram }}</td>
+                <td>{{ $hardware->storage }}</td>
+              </tr>
+            @endforeach
           </tbody>
         </table>
       </div>
     </div>
-    <a href="{{ route('equipments.create') }} " class="btn btn-primary" >Create</a>
+    <a href="{{ route('hardwares.create') }} " class="btn btn-primary" >Create</a>
 @stop
 
 @section('css')
