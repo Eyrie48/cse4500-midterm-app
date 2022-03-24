@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Equipment;
+use App\Models\equipment;
 
 class EquipmentController extends Controller
 {
@@ -43,18 +43,18 @@ class EquipmentController extends Controller
             'invoice' => 'required',
             'device_name' => 'required',
             'cpu' => 'required',
-            'purchaseDate' => 'required',
             'price' => 'required',
+            'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
        ]);
 
-       $equipment = Equipment::create([ 
+       $equipment = equipment::create([ 
             'invoice' => $request->invoice,
             'device_name' => $request->device_name,
             'cpu' => $request->cpu,
-            'purchaseDate' => $request->date('purchaseDate'),
             'price' => $request->price,
+            'purchaseDate' => $request->date('purchaseDate'),
             'ram' => $request->ram,
             'storage' => $request->storage, 
        ]);
@@ -71,7 +71,7 @@ class EquipmentController extends Controller
     public function show($id)
     {
         //
-        $equipment = Equipment::find($id); 
+        $equipment = equipment::find($id); 
         return view('equipments.show',compact('equipment'));
     }
 
