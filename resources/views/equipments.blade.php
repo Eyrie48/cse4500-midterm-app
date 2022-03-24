@@ -17,17 +17,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($equipments AS $equipment)
-              <tr>
-                <td>{{ $equipment->invoice }}</td>
-                <td>{{ $equipment->device_name }}</td>
-                <td>{{ $equipment->cpu }}</td>
-                <td>{{ $equipment->price }}</td>
-                <td>{{ $equipment->purchaseDate }}</td>
-                <td>{{ $equipment->ram }}</td>
-                <td>{{ $equipment->storage }}</td>
-              </tr>
-            @endforeach
+            
           </tbody>
         </table>
       </div>
