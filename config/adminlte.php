@@ -256,6 +256,11 @@ return [
             'url'  => 'userinfos',
             'icon' => 'fas fa-fw fa-file',
         ],
+        [
+            'text' => 'Hardwares',
+            'url'  => 'hardwares',
+            'icon' => 'fas fa-fw fa-file',
+        ],
     ],
 
     /*
