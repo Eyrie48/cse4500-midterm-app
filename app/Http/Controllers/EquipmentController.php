@@ -57,7 +57,6 @@ class EquipmentController extends Controller
             'price' => $request->price,
             'ram' => $request->ram,
             'storage' => $request->storage, 
-             
        ]);
 
        return $this->index();
