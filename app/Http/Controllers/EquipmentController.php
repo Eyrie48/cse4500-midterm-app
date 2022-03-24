@@ -16,9 +16,9 @@ class EquipmentController extends Controller
     {
         //
         //$equipments = Equipment::all();
-        return view('equipments', compact('equipments'));
+        return view('equipments');
     }
-
+//, compact('equipments')
     /**
      * Show the form for creating a new resource.
      *
