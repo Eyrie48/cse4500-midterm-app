@@ -36,6 +36,9 @@ Route::get('/equipments', function () {
 Route::get('/userinfos', function () {
     return view('userinfos');
 });
+Route::get('/hardwares', function () {
+    return view('hardwares');
+});
 //test
 Route::get('/db-test', function(){
     /* try{
