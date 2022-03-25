@@ -49,7 +49,7 @@ class HardwareController extends Controller
             'storage' => 'required',
        ]);
 
-       $hardware = Hardware::create([ 
+       $hardware = Hardwares::create([ 
         'invoice' => $request->invoice,
         'device_name' => $request->device_name,
         'cpu' => $request->cpu,
@@ -71,7 +71,7 @@ class HardwareController extends Controller
     public function show($id)
     {
         //
-        $hardware = Hardware::all();
+        $hardware = Hardwares::all();
         return view('hardwares', compact('hardware'));
     }
 
