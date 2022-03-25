@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\EquipmentController;
 use App\Http\Controllers\manufacturerController;
 use App\Http\Controllers\UserinfoController;
 use App\Http\Controllers\HardwareController;
@@ -28,10 +27,6 @@ Route::get('/home', function () {
 
 Route::get('/manufacturers', function () {
     return view('manufacturers');
-});
-
-Route::get('/equipments', function () {
-    return view('equipments');
 });
 
 Route::get('/userinfos', function () {
@@ -65,7 +60,6 @@ Route::get('/db-migrate', function() {
 });
 
 Route::resource('/manufacturers', ManufacturerController::class);
-Route::resource('/equipments', EquipmentController::class);
 Route::resource('/userinfos', UserinfoController::class);
 Route::resource('/hardwares', HardwareController::class);
 

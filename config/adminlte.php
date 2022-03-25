@@ -246,11 +246,6 @@ return [
             'url'  => 'manufacturers',
             'icon' => 'fas fa-fw fa-file',
         ],
-        [         
-            'text' => 'Equipments',
-            'url'  => 'equipments',
-            'icon' => 'fas fa-fw fa-calendar-alt',
-        ],
         [
             'text' => 'Userinfos',
             'url'  => 'userinfos',
