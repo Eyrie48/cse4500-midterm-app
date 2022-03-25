@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Hardware;
+use App\Models\Hardwares;
 
 class HardwareController extends Controller
 {
@@ -15,8 +15,8 @@ class HardwareController extends Controller
     public function index()
     {
         //
-        $hardware = Hardware::all();
-        return view('hardwares',compact('hardware'));
+        $hardware = Hardwares::all();
+        return view('hardwares',compact('hardwares'));
     }
 
     /**
