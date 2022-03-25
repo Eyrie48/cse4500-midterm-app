@@ -17,11 +17,11 @@ return new class extends Migration
             $table->id();
             $table->string('invoice');
             $table->string('device_name');
-            $table->integer('cpu');
+            $table->float('cpu');
             $table->string('price', $precision = 8, $scale = 2);
             $table->DateTime('purchaseDate');
-            $table->integer('ram');
-            $table->integer('storage');
+            $table->float('ram');
+            $table->float('storage');
             $table->timestamps();
         });
     }
