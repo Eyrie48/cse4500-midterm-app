@@ -35,7 +35,7 @@ Route::get('/userinfos', function () {
 
 Route::get('/hardwares', function () {
     $userinfo = DB::table('userinfos')->get();
-    return view('hardwares', [$userinfo]);
+    return view('hardwares', ['userinfo' => $userinfo]);
 });
 
 //test
