@@ -25,6 +25,7 @@ return new class extends Migration
             $table->DateTime('purchaseDate')->nullable();
             $table->float('ram')->nullable();
             $table->float('storage')->nullable();
+            
             $table->timestamps();
         });
     }

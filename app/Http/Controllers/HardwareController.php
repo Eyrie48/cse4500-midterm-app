@@ -47,6 +47,9 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
+            'user_info' => 'required', 
+            'user_name' => 'required',
+            'phone_number' => 'required',
        ]);
 
        $hardware = Hardwares::create([ 
