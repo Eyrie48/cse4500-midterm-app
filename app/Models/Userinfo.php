@@ -12,7 +12,7 @@ class Userinfo extends Model
 
     function classes()
     {
-        return $this->hasMany(Classes::class);
+        return $this->hasMany(Hardwares::class);
     }
     
 }
