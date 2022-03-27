@@ -9,4 +9,9 @@ class Hardwares extends Model
 {
     protected $fillable = ['invoice', 'device_name', 'cpu', 'price', 'purchaseDate', 'ram', 'storage'];
     use HasFactory;
+
+    function userinfo()
+    {
+        return $this->belongsTo(Userinfo::class);
+    }
 }
