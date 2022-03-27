@@ -34,7 +34,8 @@ Route::get('/userinfos', function () {
 });
 
 Route::get('/hardwares', function () {
-    return view('hardwares');
+    $userinfo = DB::table('userinfos')->get();
+    return view('hardwares', [$userinfo]);
 });
 
 //test
