@@ -59,6 +59,9 @@ Route::get('/db-migrate', function() {
     echo Artisan::output();
 });
 
+Route::get('/userinfos-data', [UserinfoController::class, 'show']);
+
+
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/userinfos', UserinfoController::class);
 Route::resource('/hardwares', HardwareController::class);
