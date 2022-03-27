@@ -16,11 +16,11 @@ return new class extends Migration
     {
         Schema::create('manufacturers', function (Blueprint $table) {
             $table->id();
-            $table->string('sales_name');
-            $table->string('sales_email');
-            $table->string('tech_name');
-            $table->string('tech_email');
-            $table->string('company_name');
+            $table->string('sales_name')->nullable();
+            $table->string('sales_email')->nullable();
+            $table->string('tech_name')->nullable();
+            $table->string('tech_email')->nullable();
+            $table->string('company_name')->nullable();
             $table->timestamps();
         });
     }

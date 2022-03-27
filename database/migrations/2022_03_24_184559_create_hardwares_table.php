@@ -18,13 +18,13 @@ return new class extends Migration
             //$table->unsignedBigInteger('hardware_id');
             //$table->foreignId('hardware_id')->references('id')->on('userinfos')->onUpdate('cascade');
             $table->foreignId('hardware_id')->nullable()->constrained('userinfos')->onUpdate('cascade')->onDelete('cascade');
-            $table->string('invoice');
-            $table->string('device_name');
-            $table->float('cpu');
-            $table->string('price', $precision = 8, $scale = 2);
-            $table->DateTime('purchaseDate');
-            $table->float('ram');
-            $table->float('storage');
+            $table->string('invoice')->nullable();
+            $table->string('device_name')->nullable();
+            $table->float('cpu')->nullable();
+            $table->string('price', $precision = 8, $scale = 2)->nullable();
+            $table->DateTime('purchaseDate')->nullable();
+            $table->float('ram')->nullable();
+            $table->float('storage')->nullable();
             $table->timestamps();
         });
     }

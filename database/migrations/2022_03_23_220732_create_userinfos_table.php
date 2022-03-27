@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('userinfos', function (Blueprint $table) {
             $table->id();
-            $table->string('user_name');
-            $table->string('user_email');
-            $table->float('phone_number');
+            $table->string('user_name')->nullable();
+            $table->string('user_email')->nullable();
+            $table->float('phone_number')->nullable();
             $table->timestamps();
         });
     }
