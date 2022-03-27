@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('hardwares', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('hardware_id');
+            $table->unsignedBigInteger('hardware_id')->references('id')->on('userinfos');
             $table->string('invoice');
             $table->string('device_name');
             $table->float('cpu');
