@@ -16,7 +16,7 @@ class UserinfoController extends Controller
     {
         //
         $userinfos = Userinfo::all();
-        return view('userinfos.index',compact('userinfos'));
+        return view('userinfos',compact('userinfos'));
     }
 
     /**
