@@ -10,9 +10,6 @@ class Userinfo extends Model
     protected $fillable = ['user_name','user_email', 'phone_number'];
     use HasFactory;
 
-    function classes()
-    {
-        return $this->hasMany(Hardwares::class);
-    }
+    
     
 }

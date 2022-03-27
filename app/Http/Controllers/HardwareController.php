@@ -16,7 +16,7 @@ class HardwareController extends Controller
     {
         //
         $hardwares = Hardwares::all();
-        return view('hardwares',compact('hardwares'));
+        return view('hardwares.index',compact('hardwares'));
     }
 
     /**
@@ -72,7 +72,7 @@ class HardwareController extends Controller
     {
         //
         $hardware = Hardwares::all();
-        return view('hardwares', compact('hardware'));
+        return view('hardwares.show', compact('hardware'));
     }
 
     /**
