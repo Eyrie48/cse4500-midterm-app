@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hardwares;
+use App\Models\Userinfo;
 
 class HardwareController extends Controller
 {
@@ -75,6 +76,7 @@ class HardwareController extends Controller
     {
         //
         $hardware = Hardwares::all();
+        $hardware = Userinfo::with('hardware')->get();
         return view('hardwares', compact('hardware'));
     }
 
