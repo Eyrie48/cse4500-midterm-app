@@ -17,15 +17,15 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($hardwares AS $hardware)
+            @foreach($hardwares->hardwares_total AS $hardware)
               <tr>
                 <td>{{ $hardware->invoice }}</td>
                 <td>{{ $hardware->device_name }}</td>
                 <td>{{ $hardware->cpu }}</td>
                 <td>{{ $hardware->price }}</td>
                 <td>{{ $hardware->purchaseDate }}</td>
-                <td>{{ $hardware->ram }}</td>
-                <td>{{ $hardware->storage }}</td>
+                <td>{{ $hardware->user_name }}</td>
+                <td>{{ $hardware->user_email }}</td>
               </tr>
             @endforeach
           </tbody>

@@ -9,4 +9,10 @@ class Userinfo extends Model
 {
     protected $fillable = ['user_name','user_email', 'phone_number'];
     use HasFactory;
+
+    function hardwares_total()
+    {
+        return $this->hasMany(Classes::class);
+    }
+    
 }
