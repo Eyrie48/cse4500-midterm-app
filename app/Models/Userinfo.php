@@ -12,7 +12,7 @@ class Userinfo extends Model
 
     function hardwares()
     {
-        return $this->belongsTo(Hardwares::class);
+        return $this->hasMany(Hardwares::class);
     }
     
 }
