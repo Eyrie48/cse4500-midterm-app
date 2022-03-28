@@ -62,7 +62,7 @@ class HardwareController extends Controller
        ]);
 
        $hardware = Hardwares::create([ 
-        'userinfo_id' => $request->userinfo,
+        'userinfo_id' => $request->userinfo_id,
         'invoice' => $request->invoice,
         'device_name' => $request->device_name,
         'cpu' => $request->cpu,
