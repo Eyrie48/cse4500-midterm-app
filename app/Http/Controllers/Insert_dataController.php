@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hardwares;
+use App\Models\Userinfo;
 use Illuminate\Http\Request;
 
 class Insert_dataController extends Controller
@@ -15,6 +16,8 @@ class Insert_dataController extends Controller
     public function index()
     {
         //
+        $hardwares = Hardwares::all();
+        return view('',compact('userinfos'));
     }
 
     /**
@@ -25,8 +28,9 @@ class Insert_dataController extends Controller
     public function create()
     {
         //
-        $cat = Hardwares::all();
-        return view('/insert_datas')->with('cat', $cat);
+        //$hardwares = Hardwares::all();
+        $userinfos = Userinfo::all();
+        return view('/insert_datas.create', compact('userinfos'));
         }
 
     /**

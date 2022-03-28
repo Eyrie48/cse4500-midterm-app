@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             //$table->unsignedBigInteger('hardware_id');
             //$table->foreignId('hardware_id')->references('id')->on('userinfos')->onUpdate('cascade');
-            //$table->foreignId('hardware_id')->nullable()->constrained('userinfos')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('userinfo_id')->nullable()->constrained('userinfos')->onUpdate('cascade')->onDelete('cascade');
             $table->string('invoice')->nullable();
             $table->string('device_name')->nullable();
             $table->float('cpu')->nullable();

@@ -41,6 +41,7 @@ class HardwareController extends Controller
     {
         //
         $validated = $request->validate([
+            'userinfo_id' => 'required',
             'invoice' => 'required',
             'device_name' => 'required',
             'cpu' => 'required',
@@ -54,6 +55,7 @@ class HardwareController extends Controller
        ]);
 
        $hardware = Hardwares::create([ 
+        'userinfo_id' => $request->userinfo,
         'invoice' => $request->invoice,
         'device_name' => $request->device_name,
         'cpu' => $request->cpu,
@@ -75,9 +77,10 @@ class HardwareController extends Controller
     public function show($id)
     {
         //
-        $hardware = Hardwares::all();
-        $hardware = Userinfo::with('hardware')->get();
-        return view('hardwares', compact('hardware'));
+        //$hardware = Hardwares::all();
+        //$hardware = Userinfo::with('hardware')->get();
+        $hardware = Hardwares::find($id);
+        return view('hardwares.show', compact('hardware'));
     }
 
     /**

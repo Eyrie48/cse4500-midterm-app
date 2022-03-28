@@ -63,9 +63,9 @@ class UserinfoController extends Controller
     public function show($id)
     {
         //
-        //$userinfo= Userinfo::find($id);
+        $userinfo= Userinfo::find($id);
         ///return view('userinfos.show',compact('userinfo'));
-        $userinfo = Userinfo::with('harware')->find($id);
+        //$userinfo = Userinfo::with('harware')->find($id);
         return view('userinfos.show', compact('userinfo'));
 
     }
