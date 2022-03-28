@@ -27,7 +27,7 @@
                 <td>{{ $hardware->purchaseDate }}</td>
                 <td>{{ $hardware->ram }}</td>
                 <td>{{ $hardware->storage }}</td>
-                <td><a class="btn btn-default btn-sm" href="{{ route('hardwares.show',['hardware'=>$hardwares->userinfo->id]) }}">View</a></td>
+                <td><a class="btn btn-default btn-sm" href="{{ route('hardwares.show',['hardware'=>$hardwares->userinfos->id]) }}">View</a></td>
               </tr>
             @endforeach
           </tbody>
