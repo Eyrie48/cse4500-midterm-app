@@ -7,13 +7,13 @@
 @stop
 
 @section('content')
-  <h2>{{ $hardware->id; }}</h2>
+  <h2>{{ $hardware->user_id; }}</h2>
   <div>
-      <p>{{ $manufacturer->invoice; }}</p>
-      <p>{{ $manufacturer->device name; }}</p>
-      <p>{{ $manufacturer->cpu; }}</p>
-      <p>{{ $manufacturer->price; }}</p>
-      <p>{{ $manufacturer->storage; }}</p>
-      <p>{{ $manufacturer->ram; }}</p>
+      <p>{{ $hardware->invoice; }}</p>
+      <p>{{ $hardware->device name; }}</p>
+      <p>{{ $hardware->cpu; }}</p>
+      <p>{{ $hardware->price; }}</p>
+      <p>{{ $hardware->storage; }}</p>
+      <p>{{ $hardware->ram; }}</p>
   </div>
 @stop
