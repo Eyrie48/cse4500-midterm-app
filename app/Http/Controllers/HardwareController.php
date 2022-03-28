@@ -48,7 +48,7 @@ class HardwareController extends Controller
             $request->device_name = "Tablet";
         else if($request->device_name == "3")
             $request->device_name = "Phone";
-            
+
         $validated = $request->validate([
             'userinfo_id' => 'required',
             'invoice' => 'required',
@@ -58,9 +58,6 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
-            'user_info' => 'required', 
-            'user_name' => 'required',
-            'phone_number' => 'required',
        ]);
 
        $hardware = Hardwares::create([ 
