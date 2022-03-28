@@ -86,9 +86,9 @@ class HardwareController extends Controller
         //
         //$hardware = Hardwares::all();
         //$hardware = Userinfo::with('hardware')->get();
-        $hardware = Hardwares::find($id);
+        $hardware = Hardwares::with('userinfo'::find($id));
         
-        return view('hardwares.show', compact('hardware', 'userinfo'));
+        return view('hardwares.show', compact('hardware'));
     }
 
     /**
