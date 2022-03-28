@@ -17,7 +17,7 @@
     <x-adminlte-input name="purchaseDate" type="datetime-local" label="Purchase Date"/>
     <x-adminlte-input name="ram"  label="Ram" />
     <x-adminlte-input name="storage" label="Storage" />
-    <x-adminlte-select-options name="device_name" label="Device" :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" 
+    <x-adminlte-select name="device_name" label="Device" :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" 
         placeholder="Select an option..." />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
