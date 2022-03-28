@@ -13,13 +13,13 @@
         <table id="table" class="table table-bordered">
           <thead>
             <tr>
-            <th>ID#</th><th>Invoice#</th><th>Device Name</th><th>CPU Cores</th><th>Price</th><th>Purchase Date</th><th>Ram</th><th>Storage</th><th>View</th>
+            <th>User ID</th><th>Invoice#</th><th>Device Name</th><th>CPU Cores</th><th>Price</th><th>Purchase Date</th><th>Ram</th><th>Storage</th><th>View</th>
             </tr>
           </thead>
           <tbody>
             @foreach($hardwares AS $hardware)
               <tr>
-                <td>{{ $hardware->id }}</td>
+                <td>{{ $hardware->user_id }}</td>
                 <td>{{ $hardware->invoice }}</td>
                 <td>{{ $hardware->device_name }}</td>
                 <td>{{ $hardware->cpu }}</td>
@@ -27,7 +27,7 @@
                 <td>{{ $hardware->purchaseDate }}</td>
                 <td>{{ $hardware->ram }}</td>
                 <td>{{ $hardware->storage }}</td>
-                <td><a class="btn btn-default btn-sm" href="{{ route('hardwares.show',['hardware'=>$hardwares->id]) }}">View</a></td>
+                
               </tr>
             @endforeach
           </tbody>
