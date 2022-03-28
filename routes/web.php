@@ -38,8 +38,8 @@ Route::get('/insert_datas', function () {
 });
 
 Route::get('/hardwares', function () {
-    $userinfo = DB::table('userinfos')->get();
-    return view('hardwares', compact('userinfo'));
+    
+    return view('hardwares');
 });
 
 //test
