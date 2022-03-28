@@ -81,13 +81,13 @@ class HardwareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($userinfo_id)
+    public function show($id)
     {
         //
         //$hardware = Hardwares::all();
         //$hardware = Userinfo::with('hardware')->get();
-        $hardware = Hardwares::find($userinfo_id);
-        $userinfo = Userinfo::find($userinfo_id);
+        $hardware = Hardwares::find($id);
+        
         return view('hardwares.show', compact('hardware', 'userinfo'));
     }
 
