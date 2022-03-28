@@ -11,7 +11,7 @@
     @csrf
     <x-adminlte-input name="userinfo_id" label="User ID" />
     <x-adminlte-input name="invoice" label="Invoice" />
-    <x-adminlte-select name="device_name" label="Device"/>
+    <x-adminlte-select name="device_name" label="Device">
     <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" placeholder="Select an option..." />
     <x-adminlte-input name="cpu"  label="Cpu" />
     <x-adminlte-input name="price" label="Price" />
