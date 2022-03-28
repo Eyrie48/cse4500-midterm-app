@@ -20,11 +20,11 @@ return new class extends Migration
             $table->foreignId('userinfo_id')->nullable()->constrained('userinfos')->onUpdate('cascade')->onDelete('cascade');
             $table->string('invoice')->nullable();
             $table->string('device_name')->nullable();
-            $table->float('cpu')->nullable();
+            $table->string('cpu')->nullable();
             $table->string('price', $precision = 8, $scale = 2)->nullable();
             $table->DateTime('purchaseDate')->nullable();
-            $table->float('ram')->nullable();
-            $table->float('storage')->nullable();
+            $table->string('ram')->nullable();
+            $table->string('storage')->nullable();
             
             $table->timestamps();
         });

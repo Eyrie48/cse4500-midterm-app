@@ -40,6 +40,15 @@ class HardwareController extends Controller
     public function store(Request $request)
     {
         //
+        if($request->device_name == "0")
+            $request->device_name = "Desktop";
+        else if($request->device_name == "1")
+            $request->device_name = "Laptop";
+        else if($request->device_name == "2")
+            $request->device_name = "Tablet";
+        else if($request->device_name == "3")
+            $request->device_name = "Phone";
+            
         $validated = $request->validate([
             'userinfo_id' => 'required',
             'invoice' => 'required',
