@@ -19,7 +19,7 @@
           <tbody>
             @foreach($hardwares AS $hardware)
               <tr>
-                <td>{{ $hardware->user_id }}</td>
+                <td>{{ $hardware->userinfo_id }}</td>
                 <td>{{ $hardware->invoice }}</td>
                 <td>{{ $hardware->device_name }}</td>
                 <td>{{ $hardware->cpu }}</td>
@@ -27,7 +27,7 @@
                 <td>{{ $hardware->purchaseDate }}</td>
                 <td>{{ $hardware->ram }}</td>
                 <td>{{ $hardware->storage }}</td>
-                
+                <td><a class="btn btn-default btn-sm" href="{{ route('hardwares.show',['hardware'=>$hardwares->id]) }}">View</a></td>
               </tr>
             @endforeach
           </tbody>
