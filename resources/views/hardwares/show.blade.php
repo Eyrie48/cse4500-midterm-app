@@ -15,5 +15,6 @@
       <p>Price: {{ $hardware->price; }}</p>
       <p>Storage Amount: {{ $hardware->storage; }}</p>
       <p>Ram: {{ $hardware->ram; }}</p>
+      <p>User Name: {{ $hardware->userinfo_name; }}</p>
   </div>
 @stop
