@@ -58,6 +58,7 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
+
        ]);
 
        $hardware = Hardwares::create([ 
@@ -80,13 +81,14 @@ class HardwareController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($userinfo_id)
     {
         //
         //$hardware = Hardwares::all();
         //$hardware = Userinfo::with('hardware')->get();
-        $hardware = Hardwares::find($id);
-        return view('hardwares.show', compact('hardware'));
+        $hardware = Hardwares::find($userinfo_id);
+        $userinfo = Userinfo::find($userinfo_id);
+        return view('hardwares.show', compact('hardware', 'userinfo'));
     }
 
     /**
