@@ -19,6 +19,6 @@ class Hardwares extends Model
 
     public function manufacturer()
     {
-        return $this->belongsTo(Manufacturer::class);
+        return $this->belongsTo(manufacturer::class);
     }
 }
