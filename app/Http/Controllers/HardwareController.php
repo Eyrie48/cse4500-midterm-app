@@ -33,7 +33,7 @@ class HardwareController extends Controller
         //
         $manufacturers = manufacturer::all();
         $userinfos = Userinfo::all();
-        return view('hardwares.create', compact('manufacturer', 'userinfos'));
+        return view('hardwares.create', compact('manufacturers', 'userinfos'));
     }
 
     /**
