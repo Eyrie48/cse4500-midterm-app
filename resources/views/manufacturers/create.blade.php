@@ -9,7 +9,6 @@
 @section('content')
 <form method="post" action="{{ route('manufacturers.store') }}" >
     @csrf
-    
     <x-adminlte-input name="sales_name" label="Sales Name" />
     <x-adminlte-input name="sales_email" label="Sales Email" />
     <x-adminlte-input name="tech_name" label="Tech Name" />
