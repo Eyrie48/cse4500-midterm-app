@@ -8,9 +8,9 @@
 
 @section('content')
   <h1>User Name: {{ $hardware->userinfo->user_name; }}</h1>
-
+  <hr>
   <div>
-      <p>Individual information</p>
+      <h2>Individual information</h2>
       <p>User ID: {{ $hardware->userinfo_id; }}</p>
       <p>Invoice #{{ $hardware->invoice; }}</p>
       <p>Manufacturer: {{ $hardware->manufacturer->company_name; }}</p>
@@ -19,6 +19,10 @@
       <p>Price: {{ $hardware->price; }}</p>
       <p>Storage Amount: {{ $hardware->storage; }}</p>
       <p>Ram: {{ $hardware->ram; }}</p>
+      <hr>
+      <p>Service: {{ $hardware->service; }}</p>
+      <p>Notes: {{ $hardware->notes; }}</p>
+      
   </div>
 
   

@@ -26,7 +26,8 @@ return new class extends Migration
             $table->DateTime('purchaseDate')->nullable();
             $table->string('ram')->nullable();
             $table->string('storage')->nullable();
-            
+            $table->string('notes')->nullable();
+            $table->string('service')->nullable();
             $table->timestamps();
         });
     }

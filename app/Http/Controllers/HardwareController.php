@@ -64,6 +64,8 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
+            'notes' => 'required',
+            'service' => 'required',
 
        ]);
 
@@ -77,6 +79,8 @@ class HardwareController extends Controller
         'purchaseDate' => $request->date('purchaseDate'),
         'ram' => $request->ram,
         'storage' => $request->storage, 
+        'notes' => $request->notes,
+        'service' => $request->service,
    ]);
 
    return $this->index();
@@ -141,6 +145,8 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
+            'notes' => 'required',
+            'service' => 'required',
 
         ]);
 
@@ -155,7 +161,9 @@ class HardwareController extends Controller
             'price' => $request->price,
             'purchaseDate' => $request->date('purchaseDate'),
             'ram' => $request->ram,
-            'storage' => $request->storage, 
+            'storage' => $request->storage,
+            'notes' => $request->notes,
+            'service' => $request->service, 
         ]);
         /*
         $hardware->userinfo_id = $request->userinfo_id;

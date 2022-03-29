@@ -40,7 +40,9 @@
   <x-adminlte-input name="storage" value="{{ $hardware->storage }}" label="Storage" />
   <x-adminlte-select name="device_name" value="{{ $hardware->device_name }}" label="Device" >
     <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" />
-    </x-adminlte-select>
+  </x-adminlte-select>
+  <x-adminlte-input name="notes" value="{{ $hardware->notes }}" label="Notes" />
+  <x-adminlte-input name="service" value="{{ $hardware->service }}" label="Type of Service" />
   <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop

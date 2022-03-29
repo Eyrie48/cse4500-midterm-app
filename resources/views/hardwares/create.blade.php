@@ -32,6 +32,8 @@
         <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" 
             placeholder="Select an option..." />
     </x-adminlte-select>
+    <x-adminlte-input name="notes"  label="Notes" />
+    <x-adminlte-input name="service"  label="Type of Service" />
     <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop

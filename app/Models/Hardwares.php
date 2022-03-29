@@ -9,7 +9,7 @@ use App\Models\manufacturer;
 
 class Hardwares extends Model
 {
-    protected $fillable = ['userinfo_id', 'manufacturer_id', 'invoice', 'device_name', 'cpu', 'price', 'purchaseDate', 'ram', 'storage'];
+    protected $fillable = ['userinfo_id', 'manufacturer_id', 'invoice', 'device_name', 'cpu', 'price', 'purchaseDate', 'ram', 'storage', 'notes', 'service'];
     use HasFactory;
 
     function userinfo()
