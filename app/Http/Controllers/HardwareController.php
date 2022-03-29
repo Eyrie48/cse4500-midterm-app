@@ -51,6 +51,7 @@ class HardwareController extends Controller
 
         $validated = $request->validate([
             'userinfo_id' => 'required',
+            'manufacturer_id' => 'required',
             'invoice' => 'required',
             'device_name' => 'required',
             'cpu' => 'required',
@@ -63,6 +64,7 @@ class HardwareController extends Controller
 
        $hardware = Hardwares::create([ 
         'userinfo_id' => $request->userinfo_id,
+        'manufacturer_id' => $request->manufacturer_id,
         'invoice' => $request->invoice,
         'device_name' => $request->device_name,
         'cpu' => $request->cpu,

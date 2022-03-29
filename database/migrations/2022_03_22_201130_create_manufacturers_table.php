@@ -16,6 +16,7 @@ return new class extends Migration
     {
         Schema::create('manufacturers', function (Blueprint $table) {
             $table->id();
+            $table->string('manufacturer_id')->nullable();
             $table->string('sales_name')->nullable();
             $table->string('sales_email')->nullable();
             $table->string('tech_name')->nullable();

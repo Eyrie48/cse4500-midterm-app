@@ -25,7 +25,7 @@
                         <td>{{ $manufacturer->sales_email }}</td>
                         <td>{{ $manufacturer->tech_name }}</td>
                         <td>{{ $manufacturer->tech_email }}</td>
-                        
+                        <td><a class="btn btn-default btn-sm" href="{{ route('manufacturers.show',['manufacturer'=>$manufacturer->id]) }}">View</a></td>
                     </tr>
                     @endforeach
                 </tbody>

@@ -40,6 +40,7 @@ class ManufacturerController extends Controller
     {
         //
         $validated = $request->validate([
+            'manufacturer_id' => 'required',
             'sales_name' => 'required',
             'sales_email' => 'required',
             'tech_name' => 'required',
@@ -48,6 +49,7 @@ class ManufacturerController extends Controller
        ]);
 
        $manufacturer = manufacturer::create([ 
+            'manufacturer_id' =>$request->manufacturer_id,
             'sales_name' => $request->sales_name, 
             'sales_email' => $request->sales_email,
             'tech_name' => $request->tech_name,

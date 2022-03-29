@@ -10,6 +10,7 @@
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
     <x-adminlte-input name="userinfo_id" label="User ID" />
+    <x-adminlte-input name="manufacturer_id" label="Manufacturer ID" />
     <x-adminlte-input name="invoice" label="Invoice" />
     
     <x-adminlte-input name="cpu"  label="Cpu" />
