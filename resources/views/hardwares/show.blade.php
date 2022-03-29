@@ -21,7 +21,7 @@
       <p>Ram: {{ $hardware->ram; }}</p>
   </div>
 
-  <a class="btn btn-primary" href="{{ route('hardwares.destroy',['hardware'=>$hardware->id]) }}">Delete</a>
+  
 
   <form style="margin: 0; padding: 0" action="{{ route('hardware.destroy', ['hardware'=>$hardware->id]) }}" method="POST">
     <a class="btn btn-default" href="{{ route('hardware.edit', ['hardware'=>$hardware->id]) }}">Edit</a>
