@@ -11,10 +11,14 @@
   <hr>
   <div>
     <h4>Sales Contact Information</h4>
-    <p>{{ $manufacturer->sales_name; }}</p>
-    <p>{{ $manufacturer->sales_email; }}</p>
+    <p>Name: {{ $manufacturer->sales_name; }}</p>
+    <p>Email: {{ $manufacturer->sales_email; }}</p>
     <h4>Tech Support Contact Information</h4>
-    <p>{{ $manufacturer->tech_name; }}</p>
-    <p>{{ $manufacturer->tech_email; }}</p>
+    <p>Name: {{ $manufacturer->tech_name; }}</p>
+    <p>Email: {{ $manufacturer->tech_email; }}</p>
   </div>
+
+  <form style="margin: 0; padding: 0">
+    <a class="btn btn-default" href="{{ route('hardwares.edit', ['hardware'=>$hardware->id]) }}">Edit</a>
+  </form>  
 @stop
