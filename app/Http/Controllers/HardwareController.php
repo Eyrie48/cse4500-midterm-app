@@ -122,8 +122,7 @@ class HardwareController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        if($request->device_name == "0")
+            if($request->device_name == "0")
             $request->device_name = "Desktop";
         else if($request->device_name == "1")
             $request->device_name = "Laptop";
@@ -142,23 +141,11 @@ class HardwareController extends Controller
             'purchaseDate' => 'required',
             'ram' => 'required',
             'storage' => 'required',
-       ]);
 
-       $hardware = Hardwares::find($id);
+        ]);
 
-       $hardware->userinfo_id = $request->userinfo_id;
-       $hardware->manufacturer_id = $request->manufacturer_id;
-       $hardware->invoice = $request->invoice;
-       $hardware->device_name = $request->device_name;
-       $hardware->cpu = $request->cpu;
-       $hardware->price = $request->price;
-       $hardware->purchaseDate = $request->date('purchaseDate');
-       $hardware->ram = $request->ram;
-       $hardware->storage = $request->storage;
-       
-       $hardware->update();
-
-       return $this->index();
+        $hardware = Hardwares::where('id', $id)->update($validated);
+        return $this->index();
     }
 
     /**
