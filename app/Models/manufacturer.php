@@ -8,7 +8,8 @@ use App\Models\Hardwares;
 
 class Manufacturer extends Model
 {
-    protected $fillable = ['manufacturer_id', 'sales_name', 'sales_email', 'tech_name', 'tech_email', 'company_name'];
+    //'manufacturer_id'
+    protected $fillable = ['sales_name', 'sales_email', 'tech_name', 'tech_email', 'company_name'];
     use HasFactory;
 
     public function hardwares()
