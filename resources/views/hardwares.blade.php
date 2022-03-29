@@ -13,7 +13,7 @@
         <table id="table" class="table table-bordered">
           <thead>
             <tr>
-            <th>User ID</th><th>Invoice#</th><th>Device Name</th><th>User </th><th>Price</th><th>Purchase Date</th><th>Ram</th><th>Storage</th><th>View</th>
+            <th>User ID</th><th>Invoice#</th><th>Device Name</th><th>CPU Cores</th><th>Price</th><th>Purchase Date</th><th>Ram</th><th>Storage</th><th>View</th>
             </tr>
           </thead>
           <tbody>
@@ -22,7 +22,7 @@
                 <td>{{ $hardware->userinfo_id }}</td>
                 <td>{{ $hardware->invoice }}</td>
                 <td>{{ $hardware->device_name }}</td>
-                <td>{{ $hardware->user_email }}</td>
+                <td>{{ $hardware->cpu }}</td>
                 <td>{{ $hardware->price }}</td>
                 <td>{{ $hardware->purchaseDate }}</td>
                 <td>{{ $hardware->ram }}</td>
