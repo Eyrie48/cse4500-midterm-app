@@ -20,7 +20,7 @@ class HardwareController extends Controller
         $hardwares = Hardwares::all();
         $manufacturers = manufacturer::all();
         $userinfos = Userinfo::all();
-        return view('hardwares',compact('hardwares', 'manufactureres', 'userinfos'));
+        return view('hardwares',compact('hardwares', 'manufacturers', 'userinfos'));
     }
 
     /**
@@ -102,7 +102,7 @@ class HardwareController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\Responses
      */
     public function edit($id)
     {
