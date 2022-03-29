@@ -79,6 +79,8 @@ class UserinfoController extends Controller
     public function edit($id)
     {
         //
+        $userinfo= Userinfo::find($id);
+        return view('userinfos.edit', compact('userinfo'));
     }
 
     /**
@@ -91,6 +93,19 @@ class UserinfoController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $validated = $request->validate([
+            'user_name' => 'required',
+            'user_email' => 'required',
+            'phone_number' => 'required',
+       ]);
+
+       $response = Userinfo::where('id', $id)->update([
+        'user_name' => $request->user_name,
+        'user_email' => $request->user_email,
+        'phone_number' => $request->phone_number,  
+        ]);
+
+        return $this->index();
     }
 
     /**
