@@ -15,7 +15,7 @@
   </h2>
   <div>
       <p>Invoice #{{ $hardware->invoice; }}</p>
-      <p>Device Type{{ $hardware->device_name; }}</p>
+      <p>Device Type: {{ $hardware->device_name; }}</p>
       <p>CPU: {{ $hardware->cpu; }}</p>
       <p>Price: {{ $hardware->price; }}</p>
       <p>Storage Amount: {{ $hardware->storage; }}</p>
