@@ -17,7 +17,7 @@
             </tr>
           </thead>
           <tbody>
-            @foreach($hardwares->userinfo->manufacturers AS $hardware)
+            @foreach($hardwares->userinfos->manufacturers AS $hardware)
               <tr>
                 <td>{{ $hardware->userinfo_id }}</td>
                 <td>{{ $hardware->invoice }}</td>
