@@ -9,21 +9,17 @@
 @section('content')
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
-    <x-adminlte-input name="userinfo_id" label="User ID" />
-    
-
-    <x-adminlte-select name="manufacturer_id" label="Manufacturer">
-    @foreach($manufacturers AS $m)
-      <option value='{{ $m->id }}'>{{ $m->company_name }}</option>
+    <x-adminlte-select name="userinfo_id" label="User ID" />
+    @foreach($userinfos AS $userinfo)
+      <option value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
     @endforeach
-  </x-adminlte-select>
+    </x-adminlte-select>
 
-
-
-
-
-
-
+    <x-adminlte-select name="manufacturer_id" label="Manufacturer ID">
+    @foreach($manufacturers AS $manufacturer)
+      <option value='{{ $manufacturer->id }}'>{{ $manufacturer->company_name }}</option>
+    @endforeach
+    </x-adminlte-select>
 
     <x-adminlte-input name="invoice" label="Invoice" />
     
