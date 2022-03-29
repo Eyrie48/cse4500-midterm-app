@@ -39,7 +39,7 @@
   <x-adminlte-input name="ram" value="{{ $hardware->ram }}" label="Ram" />
   <x-adminlte-input name="storage" value="{{ $hardware->storage }}" label="Storage" />
   <x-adminlte-select name="device_name" value="{{ $hardware->device_name }}" label="Device" >
-    <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" value="{{ $hardware->device_name }}" />
+    <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" />
     </x-adminlte-select>
   <x-adminlte-button type="Submit" label="Submit" />
 </form>
