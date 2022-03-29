@@ -148,7 +148,7 @@ class HardwareController extends Controller
         $hardware = Hardwares::where('id', $id)->update();
 
 
-        $hardware = ([ 
+        $hardware([ 
             'userinfo_id' => $request->userinfo_id,
             'manufacturer_id' => $request->manufacturer_id,
             'invoice' => $request->invoice,
