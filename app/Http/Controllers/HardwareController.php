@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Hardwares;
 use App\Models\Userinfo;
+use App\Models\manufacturer;
 
 class HardwareController extends Controller
 {
@@ -28,6 +29,8 @@ class HardwareController extends Controller
     public function create()
     {
         //
+        $manufacturers = manufacturer::all();
+        $userinfos = Userinfo::all();
         return view('hardwares.create');
     }
 
@@ -102,6 +105,8 @@ class HardwareController extends Controller
     public function edit($id)
     {
         //
+        $hardware = Hardwares::find($id);
+        return view('hardwares.edit', compact('hardware'));
     }
 
     /**
