@@ -20,5 +20,6 @@
       <p>Storage Amount: {{ $hardware->storage; }}</p>
       <p>Ram: {{ $hardware->ram; }}</p>
   </div>
-  <a class="btn btn-default btn-sm" href="{{ route('hardwares.destroy',['hardware'=>$hardware->id]) }}">View</a></td>
+
+  <a class="btn btn-primary" href="{{ route('hardwares.destroy',['hardware'=>$hardware->id]) }}">Delete</a>
 @stop
