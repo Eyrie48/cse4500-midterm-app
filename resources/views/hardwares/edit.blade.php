@@ -10,7 +10,18 @@
 <form method="post" action="{{ route('hardwares.update', ['hardware'=>$hardware->id]) }}">
   @csrf
   @method('PUT')
-  <x-adminlte-input name="name" value="{{ $hardware->name }}" label="Name" />
+  <x-adminlte-select name="userinfo_id" value="{{ $hardware->userinfo_id }}" label="Userinfo">
+    @foreach($userinfos AS $userinfo)
+      @if($userinfo->id == $hardware->userinfo_id)
+        <option value='{{ $userinfo->id }}' selected="selected">{{ $userinfo->user_email }}</option>
+      @else
+        <option value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
+      @endif
+    @endforeach
+  </x-adminlte-select>
+  
+  
+  <x-adminlte-input name="invoice" value="{{ $hardware->invoice }}" label="Invoice" />
 
   <x-adminlte-select name="manufacturer_id" value="{{ $hardware->manufacturer_id }}" label="Manufacturer">
     @foreach($manufacturers AS $manufacturer)
@@ -22,15 +33,7 @@
     @endforeach
   </x-adminlte-select>
   
-  <x-adminlte-select name="userinfo_id" value="{{ $hardware->userinfo_id }}" label="Userinfo">
-    @foreach($userinfos AS $userinfo)
-      @if($userinfo->id == $hardware->userinfo_id)
-        <option value='{{ $userinfo->id }}' selected="selected">{{ $userinfo->user_email }}</option>
-      @else
-        <option value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
-      @endif
-    @endforeach
-  </x-adminlte-select>
+  
 
   <x-adminlte-input name="cpu" value="{{ $hardware->cpu }}" label="CPU" />
   <x-adminlte-input name="Price" value="{{ $hardware->price }}" label="Price" />
