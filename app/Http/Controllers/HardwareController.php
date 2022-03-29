@@ -145,10 +145,18 @@ class HardwareController extends Controller
         ]);
 
 
+
         $hardware = Hardwares::where('id', $id)->update();
-
-
-        $hardware([ 
+        $hardware->userinfo_id = $request->userinfo_id;
+        $hardware->manufacturer_id = $request->manufacturer_id;
+        $hardware->invoice = $request->invoice;
+        $hardware->device_name = $request->device_name;
+        $hardware->cpu = $request->cpu;
+        $hardware->price = $request->price;
+        $hardware->purchaseDate = $request->date('purchaseDate');
+        $hardware->ram = $request->ram;
+        $hardware->storage = $request->storage;
+        /*$hardware([ 
             'userinfo_id' => $request->userinfo_id,
             'manufacturer_id' => $request->manufacturer_id,
             'invoice' => $request->invoice,
@@ -159,6 +167,8 @@ class HardwareController extends Controller
             'ram' => $request->ram,
             'storage' => $request->storage, 
        ]);
+       */
+
         return $this->index();
 
     }
