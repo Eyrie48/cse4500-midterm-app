@@ -10,7 +10,7 @@
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
     <x-adminlte-input name="userinfo_id" label="User ID" />
-    <x-adminlte-input name="manufacturer_id" label="Manufacturer ID" />
+    
 
     <x-adminlte-select name="manufacturer_id" label="Manufacturer">
     @foreach($manufacturers AS $m)

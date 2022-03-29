@@ -18,7 +18,9 @@ class HardwareController extends Controller
     {
         //
         $hardwares = Hardwares::all();
-        return view('hardwares',compact('hardwares'));
+        $manufacturers = manufacturer::all();
+        $userinfos = Userinfo::all();
+        return view('hardwares',compact('hardwares', 'manufactureres', 'userinfos'));
     }
 
     /**
@@ -31,7 +33,7 @@ class HardwareController extends Controller
         //
         $manufacturers = manufacturer::all();
         $userinfos = Userinfo::all();
-        return view('hardwares.create');
+        return view('hardwares.create', compact('manufacturer', 'userinfos'));
     }
 
     /**

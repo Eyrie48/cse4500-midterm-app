@@ -10,11 +10,11 @@
 <form method="post" action="{{ route('hardwares.update', ['hardware'=>$harware->id]) }}">
   @csrf
   @method('PUT')
-  <x-adminlte-input name="name" value="{{ $harware->name }}" label="Name" />
+  <x-adminlte-input name="name" value="{{ $hardware->name }}" label="Name" />
 
-  <x-adminlte-select name="manufacturer_id" value="{{ $device->manufacturer_id }}" label="Manufacturer">
+  <x-adminlte-select name="manufacturer_id" value="{{ $hardware->manufacturer_id }}" label="Manufacturer">
     @foreach($manufacturers AS $m)
-      @if($m->id == $device->manufacturer_id)
+      @if($m->id == $hardware->manufacturer_id)
         <option value='{{ $m->id }}' selected="selected">{{ $m->name }}</option>
       @else
         <option value='{{ $m->id }}'>{{ $m->name }}</option>
