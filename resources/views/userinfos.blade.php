@@ -23,6 +23,7 @@
           <td>{{ $userinfo->user_name }}</td>
           <td>{{ $userinfo->user_email }}</td>
           <td>{{ $userinfo->phone_number }}</td>
+          <td><a class="btn btn-default btn-sm" href="{{ route('userinfos.show',['userinfo'=>$userinfo->id]) }}">View</a></td>
         </tr>
         @endforeach
       </tbody>
