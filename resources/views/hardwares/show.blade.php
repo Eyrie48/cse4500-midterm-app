@@ -3,13 +3,15 @@
 @section('title', 'Hardware')
 
 @section('content_header')
-    <h1>Hardware</h1>
+    <h3>Hardware Information</h3>
 @stop
 
 @section('content')
-  <h2>User Name: {{ $hardware->userinfo->user_name; }}</h2>
-  <h2>User ID: {{ $hardware->userinfo_id; }}</h2>
+  <h1>User Name: {{ $hardware->userinfo->user_name; }}</h1>
+
   <div>
+      <p>User ID: {{ $hardware->userinfo_id; }}</p>
+      <p>Individual information</p>
       <p>Invoice #{{ $hardware->invoice; }}</p>
       <p>Device Type: {{ $hardware->device_name; }}</p>
       <p>CPU: {{ $hardware->cpu; }}</p>
