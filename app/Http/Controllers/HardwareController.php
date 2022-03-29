@@ -144,7 +144,21 @@ class HardwareController extends Controller
 
         ]);
 
+
         $hardware = Hardwares::where('id', $id)->update();
+
+
+        $hardware = ([ 
+            'userinfo_id' => $request->userinfo_id,
+            'manufacturer_id' => $request->manufacturer_id,
+            'invoice' => $request->invoice,
+            'device_name' => $request->device_name,
+            'cpu' => $request->cpu,
+            'price' => $request->price,
+            'purchaseDate' => $request->date('purchaseDate'),
+            'ram' => $request->ram,
+            'storage' => $request->storage, 
+       ]);
         return $this->index();
 
     }
