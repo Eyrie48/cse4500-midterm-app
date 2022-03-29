@@ -7,34 +7,40 @@
 @stop
 
 @section('content')
-<form method="post" action="{{ route('hardwares.update', ['hardware'=>$harware->id]) }}">
+<form method="post" action="{{ route('hardwares.update', ['hardware'=>$hardware->id]) }}">
   @csrf
   @method('PUT')
   <x-adminlte-input name="name" value="{{ $hardware->name }}" label="Name" />
 
   <x-adminlte-select name="manufacturer_id" value="{{ $hardware->manufacturer_id }}" label="Manufacturer">
-    @foreach($manufacturers AS $m)
-      @if($m->id == $hardware->manufacturer_id)
-        <option value='{{ $m->id }}' selected="selected">{{ $m->name }}</option>
+    @foreach($manufacturers AS $manufacturer)
+      @if($manufacturer->id == $hardware->manufacturer_id)
+        <option value='{{ $manufacturer->id }}' selected="selected">{{ $manufacturer->company_name }}</option>
       @else
-        <option value='{{ $m->id }}'>{{ $m->name }}</option>
+        <option value='{{ $manufacturer->id }}'>{{ $manufacturer->company_name }}</option>
       @endif
     @endforeach
   </x-adminlte-select>
   
-  <x-adminlte-select name="category_id" value="{{ $device->category_id }}" label="Category">
-    @foreach($categories AS $c)
-      @if($c->id == $device->category_id)
-        <option value='{{ $c->id }}' selected="selected">{{ $c->name }}</option>
+  <x-adminlte-select name="userinfo_id" value="{{ $hardware->userinfo_id }}" label="Userinfo">
+    @foreach($userinfos AS $userinfo)
+      @if($userinfo->id == $hardware->userinfo_id)
+        <option value='{{ $userinfo->id }}' selected="selected">{{ $userinfo->user_email }}</option>
       @else
-        <option value='{{ $c->id }}'>{{ $c->name }}</option>
+        <option value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
       @endif
     @endforeach
   </x-adminlte-select>
 
-  <x-adminlte-input name="spec_screen_size" value="{{ $device->spec_screen_size }}" label="Screen Size" />
-  <x-adminlte-input name="spec_ram" value="{{ $device->spec_ram }}" label="RAM" />
-  <x-adminlte-input name="spec_storage" value="{{ $device->spec_storage }}" label="Storage" />
+  <x-adminlte-input name="cpu" value="{{ $hardware->cpu }}" label="CPU" />
+  <x-adminlte-input name="Price" value="{{ $hardware->price }}" label="Price" />
+  <x-adminlte-input name="purchaseDate" value="{{ $hardware->purchaseDate }}" label="Purchase Date" />
+  <x-adminlte-input name="ram" value="{{ $hardware->ram }}" label="Ram" />
+  <x-adminlte-input name="storage" value="{{ $hardware->storage }}" label="Storage" />
+  <x-adminlte-select name="device_name" value="{{ $hardware->purchaseDate }}" label="Device" >
+    <x-adminlte-options :options="['Desktop', 'Laptop', 'Tablet', 'Phone']" 
+            placeholder="Select an option..." />
+    </x-adminlte-select>
   <x-adminlte-button type="Submit" label="Submit" />
 </form>
 @stop
