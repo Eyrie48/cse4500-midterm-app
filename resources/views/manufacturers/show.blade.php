@@ -19,6 +19,6 @@
   </div>
 
   <form style="margin: 0; padding: 0">
-    <a class="btn btn-default" href="{{ route('hardwares.edit', ['hardware'=>$hardware->id]) }}">Edit</a>
+    <a class="btn btn-default" href="{{ route('manufacturers.edit', ['manufacturer'=>$manufaccturer->id]) }}">Edit</a>
   </form>  
 @stop
