@@ -23,8 +23,8 @@
 
   
 
-  <form style="margin: 0; padding: 0" action="{{ route('hardware.destroy', ['hardware'=>$hardware->id]) }}" method="POST">
-    <a class="btn btn-default" href="{{ route('hardware.edit', ['hardware'=>$hardware->id]) }}">Edit</a>
+  <form style="margin: 0; padding: 0" action="{{ route('hardwares.destroy', ['hardware'=>$hardware->id]) }}" method="POST">
+    <a class="btn btn-default" href="{{ route('hardwares.edit', ['hardware'=>$hardware->id]) }}">Edit</a>
     @csrf
       @method('DELETE')
       <button type="submit" class="btn btn-danger">Delete</button>
