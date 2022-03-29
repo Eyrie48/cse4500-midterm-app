@@ -144,7 +144,7 @@ class HardwareController extends Controller
 
         ]);
 
-        $hardware = Hardwares::where('id', $id)->update($validated);
+        $response = Hardwares::where('id', $id)->update($validated);
         return $this->index();
     }
 
