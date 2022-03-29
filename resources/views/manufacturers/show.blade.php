@@ -14,7 +14,7 @@
     <p>{{ $manufacturer->sales_name; }}</p>
     <p>{{ $manufacturer->sales_email; }}</p>
     <h4>Tech Support Contact Information</h4>
-    <p>{{ $manufacturer->support_name; }}</p>
-    <p>{{ $manufacturer->support_email; }}</p>
+    <p>{{ $manufacturer->tech_name; }}</p>
+    <p>{{ $manufacturer->tech_email; }}</p>
   </div>
 @stop
