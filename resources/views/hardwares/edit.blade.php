@@ -33,11 +33,9 @@
     @endforeach
   </x-adminlte-select>
   
-  
-
   <x-adminlte-input name="cpu" value="{{ $hardware->cpu }}" label="CPU" />
   <x-adminlte-input name="Price" value="{{ $hardware->price }}" label="Price" />
-  <x-adminlte-input name="purchaseDate" value="{{ $hardware->purchaseDate }}" label="Purchase Date" />
+  <x-adminlte-input name="purchaseDate" type="datetime-local" value="{{ $hardware->purchaseDate }}" label="Purchase Date" />
   <x-adminlte-input name="ram" value="{{ $hardware->ram }}" label="Ram" />
   <x-adminlte-input name="storage" value="{{ $hardware->storage }}" label="Storage" />
   <x-adminlte-select name="device_name" value="{{ $hardware->device_name }}" label="Device" >
