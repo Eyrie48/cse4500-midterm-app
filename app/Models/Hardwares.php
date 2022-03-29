@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Userinfo;
-use App\Models\Manufacturer;
+use App\Models\manufacturer;
 
 class Hardwares extends Model
 {
