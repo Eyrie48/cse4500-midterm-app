@@ -125,5 +125,7 @@ class HardwareController extends Controller
     public function destroy($id)
     {
         //
+        $response = Hardwares::where('id', $id)->delete();
+        return $this->index();
     }
 }
