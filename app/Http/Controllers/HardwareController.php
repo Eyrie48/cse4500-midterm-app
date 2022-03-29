@@ -123,6 +123,42 @@ class HardwareController extends Controller
     public function update(Request $request, $id)
     {
         //
+        if($request->device_name == "0")
+            $request->device_name = "Desktop";
+        else if($request->device_name == "1")
+            $request->device_name = "Laptop";
+        else if($request->device_name == "2")
+            $request->device_name = "Tablet";
+        else if($request->device_name == "3")
+            $request->device_name = "Phone";
+
+        $validated = $request->validate([
+            'userinfo_id' => 'required',
+            'manufacturer_id' => 'required',
+            'invoice' => 'required',
+            'device_name' => 'required',
+            'cpu' => 'required',
+            'price' => 'required',
+            'purchaseDate' => 'required',
+            'ram' => 'required',
+            'storage' => 'required',
+       ]);
+
+       $hardware = Hardwares::find($id);
+
+       $hardware->userinfo_id = $request->userinfo_id;
+       $hardware->manufacturer_id = $request->manufacturer_id;
+       $hardware->invoice = $request->invoice;
+       $hardware->device_name = $request->device_name;
+       $hardware->cpu = $request->cpu;
+       $hardware->price = $request->price;
+       $hardware->purchaseDate = $request->date('purchaseDate');
+       $hardware->ram = $request->ram;
+       $hardware->storage = $request->storage;
+       
+       $hardware->update();
+
+       return $this->index();
     }
 
     /**
