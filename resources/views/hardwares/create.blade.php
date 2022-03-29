@@ -13,7 +13,7 @@
     <x-adminlte-input name="manufacturer_id" label="Manufacturer ID" />
     <x-adminlte-input name="invoice" label="Invoice" />
     
-    <x-adminlte-input name="cpu"  label="Cpu" />
+    <x-adminlte-input name="cpu"  label="CPU Core" />
     <x-adminlte-input name="price" label="Price" />
     <x-adminlte-input name="purchaseDate" type="datetime-local" label="Purchase Date"/>
     <x-adminlte-input name="ram"  label="Ram" />
