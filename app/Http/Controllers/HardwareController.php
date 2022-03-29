@@ -107,8 +107,10 @@ class HardwareController extends Controller
     public function edit($id)
     {
         //
+        $manufacturers = manufacturer::all();
+        $userinfos = Userinfo::all();
         $hardware = Hardwares::find($id);
-        return view('hardwares.edit', compact('hardware'));
+        return view('hardwares.edit', compact('hardware', 'manufacturers', 'userinfos'));
     }
 
     /**
