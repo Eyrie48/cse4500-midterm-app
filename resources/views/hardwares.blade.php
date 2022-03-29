@@ -22,7 +22,7 @@
                 <td>{{ $hardware->userinfo_id }}</td>
                 <td>{{ $hardware->invoice }}</td>
                 <td>{{ $hardware->device_name }}</td>
-                <td>{{ $userinfos->hardware->user_email }}</td>
+                <td>{{ $hardware->userinfo->user_email }}</td>
                 <td>{{ $hardware->price }}</td>
                 <td>{{ $hardware->purchaseDate }}</td>
                 <td>{{ $hardware->ram }}</td>
