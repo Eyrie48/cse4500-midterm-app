@@ -11,7 +11,7 @@
     @csrf
     <x-adminlte-select name="userinfo_id" label="User ID" >
     @foreach($userinfos AS $userinfo)
-      <option placeholder="Select an option..." value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
+      <option placeholder="Select an option..." value='{{ $userinfo->id }}'></option>
     @endforeach
     </x-adminlte-select>
 
