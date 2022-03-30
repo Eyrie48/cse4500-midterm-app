@@ -9,13 +9,13 @@
 @section('content')
 <form method="post" action="{{ route('hardwares.store') }}" >
     @csrf
-    <x-adminlte-select name="userinfo_id" label="User ID" >
+    <x-adminlte-select name="userinfo_id" label="Select User Email" >
     @foreach($userinfos AS $userinfo)
-      <option placeholder="Select an option..." value='{{ $userinfo->id }}'></option>
+      <option value='{{ $userinfo->id }}'>{{ $userinfo->user_email }}</option>
     @endforeach
     </x-adminlte-select>
 
-    <x-adminlte-select name="manufacturer_id" label="Manufacturer ID">
+    <x-adminlte-select name="manufacturer_id" label="Select Manufacturer">
     @foreach($manufacturers AS $manufacturer)
       <option value='{{ $manufacturer->id }}'>{{ $manufacturer->company_name }}</option>
     @endforeach
