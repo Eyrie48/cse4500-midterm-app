@@ -256,11 +256,6 @@ return [
             'url'  => 'hardwares',
             'icon' => 'fas fa-fw fa-file',
         ],
-        [
-            'text' => 'Insert Data',
-            'url'  => 'insert_datas',
-            'icon' => 'fas fa-fw fa-file',
-        ],
     ],
 
     /*

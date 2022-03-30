@@ -33,10 +33,6 @@ Route::get('/userinfos', function () {
     return view('userinfos');
 });
 
-Route::get('/insert_datas', function () {
-    return view('insert_datas');
-});
-
 Route::get('/hardwares', function () {
     
     return view('hardwares');
