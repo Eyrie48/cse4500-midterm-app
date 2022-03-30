@@ -14,7 +14,10 @@
     <p>Phone Number: {{ $userinfo->phone_number; }}</p>
   </div>
 
-  <form style="margin: 0; padding: 0">
+  <form style="margin: 0; padding: 0" action="{{ route('userinfos.destroy', ['iserinfo'=>$userinfo->id]) }}" method="POST">
     <a class="btn btn-default" href="{{ route('userinfos.edit', ['userinfo'=>$userinfo->id]) }}">Edit</a>
+    @csrf
+      @method('DELETE')
+      <button type="submit" class="btn btn-danger">Delete</button>
   </form>  
 @stop
